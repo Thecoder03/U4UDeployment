@@ -1,11 +1,10 @@
 import express from "express";
-
+import fs from "fs"
+import bodyParser from "bodyParser"
 import cors from "cors";
 import path from "path";
 const app = express();
 app.use(cors());
-var bodyParser = require("body-parser");
-const fs = require("fs");
 
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "./u4u_react/build")));
